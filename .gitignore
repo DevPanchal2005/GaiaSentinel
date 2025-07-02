@@ -1,4 +1,4 @@
 # Folders to ignore
 **/backup-folder/ 
-**/organized_images/
-**/yolo_labels/
+**/images/
+**/labels/
