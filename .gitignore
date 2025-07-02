@@ -1,1 +1,4 @@
-**/downloaded_images/
+# Folders to ignore
+**/backup-folder/ 
+**/organized_images/
+**/yolo_labels/
