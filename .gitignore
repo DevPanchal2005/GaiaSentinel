@@ -1,4 +1,5 @@
 # Folders to ignore
+**/taco-env/
 **/backup-folder/ 
 **/images/
 **/labels/
