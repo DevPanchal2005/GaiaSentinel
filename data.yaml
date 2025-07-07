@@ -1,0 +1,65 @@
+path: data 
+train: images/train
+val: images/val
+
+names:
+  0: aluminium foil
+  1: battery
+  2: blister pack
+  3: bottle
+  4: bottle cap
+  5: broken glass
+  6: can
+  7: cardboard
+  8: cigarette
+  9: cup
+  10: food waste
+  11: glass
+  12: glove
+  13: mask
+  14: metal
+  15: net
+  16: paper
+  17: paper bag
+  18: paper cup
+  19: paper plate
+  20: plastic
+  21: plastic bag
+  22: plastic container
+  23: plastic film
+  24: plastic lid
+  25: plastic straw
+  26: plastic tube
+  27: pop tab
+  28: rope
+  29: rubber band
+  30: sachet
+  31: shoe
+  32: single-use carrier bag
+  33: six pack rings
+  34: sponge
+  35: spray bottle
+  36: styrofoam piece
+  37: takeaway container
+  38: tin
+  39: tire
+  40: tissue
+  41: toothbrush
+  42: toothpaste tube
+  43: tray
+  44: tube
+  45: unlabeled litter
+  46: wrapper
+  47: food wrapper
+  48: drink can
+  49: cleaning cloth
+  50: light bulb
+  51: mobile phone
+  52: pen
+  53: razor
+  54: scissors
+  55: spoon
+  56: syringe
+  57: thermocol
+  58: toy
+  59: umbrella
