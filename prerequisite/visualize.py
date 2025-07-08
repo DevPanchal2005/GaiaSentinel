@@ -6,14 +6,66 @@ import matplotlib.pyplot as plt
 image_dir = 'data/images/train'   # or 'images/val'
 label_dir = 'data/labels/train'   # match to image set
 class_names = [
-    "aluminium foil", "battery", "blister pack", "bottle", "bottle cap", "broken glass", "can", "cardboard",
-    "cigarette", "cup", "food waste", "glass", "glove", "mask", "metal", "net", "paper", "paper bag",
-    "paper cup", "paper plate", "plastic", "plastic bag", "plastic container", "plastic film", "plastic lid",
-    "plastic straw", "plastic tube", "pop tab", "rope", "rubber band", "sachet", "shoe", "single-use carrier bag",
-    "six pack rings", "sponge", "spray bottle", "styrofoam piece", "takeaway container", "tin", "tire", "tissue",
-    "toothbrush", "toothpaste tube", "tray", "tube", "unlabeled litter", "wrapper", "food wrapper", "drink can",
-    "cleaning cloth", "light bulb", "mobile phone", "pen", "razor", "scissors", "spoon", "syringe", "thermocol",
-    "toy", "umbrella"
+    "Aluminium foil",
+    "Battery",
+    "Aluminium blister pack",
+    "Carded blister pack",
+    "Other plastic bottle",
+    "Clear plastic bottle",
+    "Glass bottle",
+    "Plastic bottle cap",
+    "Metal bottle cap",
+    "Broken glass",
+    "Food Can",
+    "Aerosol",
+    "Drink can",
+    "Toilet tube",
+    "Other carton",
+    "Egg carton",
+    "Drink carton",
+    "Corrugated carton",
+    "Meal carton",
+    "Pizza box",
+    "Paper cup",
+    "Disposable plastic cup",
+    "Foam cup",
+    "Glass cup",
+    "Other plastic cup",
+    "Food waste",
+    "Glass jar",
+    "Plastic lid",
+    "Metal lid",
+    "Other plastic",
+    "Magazine paper",
+    "Tissues",
+    "Wrapping paper",
+    "Normal paper",
+    "Paper bag",
+    "Plastified paper bag",
+    "Plastic film",
+    "Six pack rings",
+    "Garbage bag",
+    "Other plastic wrapper",
+    "Single-use carrier bag",
+    "Polypropylene bag",
+    "Crisp packet",
+    "Spread tub",
+    "Tupperware",
+    "Disposable food container",
+    "Foam food container",
+    "Other plastic container",
+    "Plastic glooves",
+    "Plastic utensils",
+    "Pop tab",
+    "Rope & strings",
+    "Scrap metal",
+    "Shoe",
+    "Squeezable tube",
+    "Plastic straw",
+    "Paper straw",
+    "Styrofoam piece",
+    "Unlabeled litter",
+    "Cigarette"
 ] # Add your 60 class names in a list, e.g. ['plastic', 'paper', ...]
 
 # Visualize N random samples
@@ -44,9 +96,9 @@ for img_file in sample_images:
                 y1 = int((y - bh / 2) * h)
                 x2 = int((x + bw / 2) * w)
                 y2 = int((y + bh / 2) * h)
-                cv2.rectangle(image, (x1, y1), (x2, y2), (0, 255, 0), 2)
+                cv2.rectangle(image, (x1, y1), (x2, y2), (0, 255, 0), 6)
                 class_label = class_names[int(cls_id)] if int(cls_id) < len(class_names) else str(cls_id)
-                cv2.putText(image, class_label, (x1, y1 - 5), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 1)
+                cv2.putText(image, class_label, (x1, y1 - 5), cv2.FONT_HERSHEY_SIMPLEX, 2.0, (255, 0, 0), 6)
 
     else:
         print(f"⚠️ No label file found for: {img_file}")
