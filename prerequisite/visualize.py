@@ -3,57 +3,26 @@ import cv2
 import matplotlib.pyplot as plt
 
 # Set paths
-image_dir = 'data/images/train'   # or 'images/val'
-label_dir = 'data/labels/train'   # match to image set
+image_dir = 'data/images'   # or 'images/val'
+label_dir = 'data/new_labels'   # match to image set
 class_names = [
     "Aluminium foil",
     "Battery",
-    "Aluminium blister pack",
-    "Carded blister pack",
-    "Other plastic bottle",
-    "Clear plastic bottle",
-    "Glass bottle",
-    "Plastic bottle cap",
-    "Metal bottle cap",
+    "Blister pack",
+    "Bottle",
+    "Bottle cap",
     "Broken glass",
-    "Food Can",
-    "Aerosol",
-    "Drink can",
-    "Toilet tube",
-    "Other carton",
-    "Egg carton",
-    "Drink carton",
-    "Corrugated carton",
-    "Meal carton",
-    "Pizza box",
-    "Paper cup",
-    "Disposable plastic cup",
-    "Foam cup",
-    "Glass cup",
-    "Other plastic cup",
+    "Can",
+    "Carton",
+    "Cup",
     "Food waste",
     "Glass jar",
-    "Plastic lid",
-    "Metal lid",
+    "Lid",
     "Other plastic",
-    "Magazine paper",
-    "Tissues",
-    "Wrapping paper",
-    "Normal paper",
+    "Paper",
     "Paper bag",
-    "Plastified paper bag",
-    "Plastic film",
-    "Six pack rings",
-    "Garbage bag",
-    "Other plastic wrapper",
-    "Single-use carrier bag",
-    "Polypropylene bag",
-    "Crisp packet",
-    "Spread tub",
-    "Tupperware",
-    "Disposable food container",
-    "Foam food container",
-    "Other plastic container",
+    "Plastic bag & wrapper",
+    "Plastic container",
     "Plastic glooves",
     "Plastic utensils",
     "Pop tab",
@@ -61,17 +30,17 @@ class_names = [
     "Scrap metal",
     "Shoe",
     "Squeezable tube",
-    "Plastic straw",
-    "Paper straw",
+    "Straw",
     "Styrofoam piece",
     "Unlabeled litter",
     "Cigarette"
-] # Add your 60 class names in a list, e.g. ['plastic', 'paper', ...]
+]
+
 
 # Visualize N random samples
-N = 10
+N = 13
 image_files = [f for f in os.listdir(image_dir) if f.endswith(('.jpg', '.jpeg', '.png'))]
-sample_images = image_files[:N]
+sample_images = image_files[N:]
 
 for img_file in sample_images:
     img_path = os.path.join(image_dir, img_file)
@@ -96,9 +65,9 @@ for img_file in sample_images:
                 y1 = int((y - bh / 2) * h)
                 x2 = int((x + bw / 2) * w)
                 y2 = int((y + bh / 2) * h)
-                cv2.rectangle(image, (x1, y1), (x2, y2), (0, 255, 0), 6)
+                cv2.rectangle(image, (x1, y1), (x2, y2), (0, 255, 0), 4)
                 class_label = class_names[int(cls_id)] if int(cls_id) < len(class_names) else str(cls_id)
-                cv2.putText(image, class_label, (x1, y1 - 5), cv2.FONT_HERSHEY_SIMPLEX, 2.0, (255, 0, 0), 6)
+                cv2.putText(image, class_label, (x1, y1 - 5), cv2.FONT_HERSHEY_SIMPLEX, 1.5, (255, 0, 0), 5)
 
     else:
         print(f"⚠️ No label file found for: {img_file}")
