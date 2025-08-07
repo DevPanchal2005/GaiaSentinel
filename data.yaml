@@ -1,33 +1,19 @@
-path: data 
+path: data
 train: images/train
 val: images/val
-
+nc: 14
 names:
-  0: Aluminium foil
-  1: Battery
-  2: Blister pack
+  0: Plastic bag & wrapper
+  1: Cigarette
+  2: Unlabeled litter
   3: Bottle
   4: Bottle cap
-  5: Broken glass
+  5: Other plastic
   6: Can
   7: Carton
   8: Cup
-  9: Food waste
-  10: Glass jar
-  11: Lid
-  12: Other plastic
-  13: Paper
-  14: Paper bag
-  15: Plastic bag & wrapper
-  16: Plastic container
-  17: Plastic glooves
-  18: Plastic utensils
-  19: Pop tab
-  20: Rope & strings
-  21: Scrap metal
-  22: Shoe
-  23: Squeezable tube
-  24: Straw
-  25: Styrofoam piece
-  26: Unlabeled litter
-  27: Cigarette
+  9: Straw
+  10: Paper
+  11: Broken glass
+  12: Styrofoam piece
+  13: Pop tab
