@@ -4,7 +4,7 @@ import random
 from glob import glob
 
 IMG_DIR = "data/images"
-LBL_DIR = "data/labels"
+LBL_DIR = "data/new_labels"
 OUT_DIR = "data"
 TRAIN_RATIO = 0.8
 
@@ -24,7 +24,9 @@ def copy_pairs(image_list, subset):
     for img_path in image_list:
         base = os.path.basename(img_path)
         lbl_path = os.path.join(LBL_DIR, os.path.splitext(base)[0] + ".txt")
-        if not os.path.exists(lbl_path): continue  # skip unpaired
+        if not os.path.exists(lbl_path): 
+            print(f"❌ No label found for: {img_path} (expected: {lbl_path})")
+            continue  # skip unpaired
 
         shutil.copy(img_path, os.path.join(OUT_DIR, "images", subset, base))
         shutil.copy(lbl_path, os.path.join(OUT_DIR, "labels", subset, os.path.basename(lbl_path)))

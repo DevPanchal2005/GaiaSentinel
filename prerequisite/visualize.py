@@ -6,34 +6,20 @@ import matplotlib.pyplot as plt
 image_dir = 'data/images'   # or 'images/val'
 label_dir = 'data/new_labels'   # match to image set
 class_names = [
-    "Aluminium foil",
-    "Battery",
-    "Blister pack",
+    "Plastic bag & wrapper",
+    "Cigarette",
+    "Unlabeled litter",
     "Bottle",
     "Bottle cap",
-    "Broken glass",
+    "Other plastic",
     "Can",
     "Carton",
     "Cup",
-    "Food waste",
-    "Glass jar",
-    "Lid",
-    "Other plastic",
-    "Paper",
-    "Paper bag",
-    "Plastic bag & wrapper",
-    "Plastic container",
-    "Plastic glooves",
-    "Plastic utensils",
-    "Pop tab",
-    "Rope & strings",
-    "Scrap metal",
-    "Shoe",
-    "Squeezable tube",
     "Straw",
+    "Paper",
+    "Broken glass",
     "Styrofoam piece",
-    "Unlabeled litter",
-    "Cigarette"
+    "Pop tab"
 ]
 
 
