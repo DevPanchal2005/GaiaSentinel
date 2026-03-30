@@ -27,7 +27,7 @@ with col1:
 
 with col2:
     # You can add an image here if available
-    st.image("assests/taco_logo.png", use_container_width=True)
+    st.image(os.path.join("assets", "taco_logo.png"), use_container_width=True)
 
 # Features section
 st.markdown("## 🚀 Key Features")
