@@ -3,7 +3,6 @@ from PIL import Image
 
 @st.cache_resource
 def load_model():
-    from ultralytics import YOLO
     return YOLO("yolov8s.pt")  # yolov8s model you trained
 
 st.title("🔍 Trash Detection")
@@ -22,6 +21,7 @@ if img:
     st.image(image, caption="Uploaded Image", use_container_width=True)
     
     with st.spinner("Detecting trash..."):
+        from ultralytics import YOLO
         model = load_model()
         result = model(image)[0]
         result_image = result.plot()
