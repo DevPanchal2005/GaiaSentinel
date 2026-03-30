@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 path: data
 train: images/train
 val: images/val
@@ -16,4 +17,24 @@ names:
   10: Paper
   11: Broken glass
   12: Styrofoam piece
+=======
+path: data
+train: images/train
+val: images/val
+nc: 14
+names:
+  0: Plastic bag & wrapper
+  1: Cigarette
+  2: Unlabeled litter
+  3: Bottle
+  4: Bottle cap
+  5: Other plastic
+  6: Can
+  7: Carton
+  8: Cup
+  9: Straw
+  10: Paper
+  11: Broken glass
+  12: Styrofoam piece
+>>>>>>> 68c67aa1fb32fb3f2636cda97e4f54924439c7b3
   13: Pop tab

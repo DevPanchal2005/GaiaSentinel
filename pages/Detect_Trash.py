@@ -27,6 +27,7 @@ if img:
         result_image = result.plot()
         st.image(result_image, caption="Detected Objects", use_container_width=True)
 else:
+    st.markdown("### 🖼️ Sample Images")
     img_col1, img_col2, img_col3 = st.columns(3)
 
     with img_col1:
@@ -36,6 +37,14 @@ else:
         st.image("assests/sample2.png", caption="Can in vegetation", use_container_width=True)
 
     with img_col3:
-        st.image("assests/sample3.jpg", caption="Cup at a pavement", use_container_width=True)
+        st.image("assests/sample3.jpg", caption="Cleaner Bottles", use_container_width=True)
+
+    img_col4, img_col5, img_col6 = st.columns(3)
+
+    with img_col4:
+        st.image("assests/sample4.jpg", caption="Plastic Cup in Hand", use_container_width=True)
+
+    with img_col5:
+        st.image("assests/sample5.jpg", caption="Paper Cups on stand", use_container_width=True)
 
 
