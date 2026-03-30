@@ -1,9 +1,9 @@
 import streamlit as st
 from PIL import Image
-from ultralytics import YOLO
 
 @st.cache_resource
 def load_model():
+    from ultralytics import YOLO
     return YOLO("yolov8s.pt")  # yolov8s model you trained
 
 st.title("🔍 Trash Detection")
