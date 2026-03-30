@@ -32,7 +32,7 @@ else:
     img_col1, img_col2, img_col3 = st.columns(3)
 
     with img_col1:
-        st.image(os.path.join("assets", "sample1.jpg"), caption="Bottles near Water Body", use_container_width=True)
+        st.image(os.path.join("assets", "sample1.JPG"), caption="Bottles near Water Body", use_container_width=True)
 
     with img_col2:
         st.image(os.path.join("assets", "sample2.png"), caption="Can in vegetation", use_container_width=True)
