@@ -1,6 +1,7 @@
 import streamlit as st
 from PIL import Image
 import os
+from ultralytics import YOLO
 
 @st.cache_resource
 def load_model():
@@ -22,7 +23,6 @@ if img:
     st.image(image, caption="Uploaded Image", use_container_width=True)
     
     with st.spinner("Detecting trash..."):
-        from ultralytics import YOLO
         model = load_model()
         result = model(image)[0]
         result_image = result.plot()

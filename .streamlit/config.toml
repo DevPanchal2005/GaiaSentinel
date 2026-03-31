@@ -3,3 +3,10 @@ level = "info"
 
 [client]
 showErrorDetails = true
+
+[theme]
+primaryColor = "#4CAF50"
+backgroundColor = "#0F1A0F"
+secondaryBackgroundColor = "#1A2E1A"
+textColor = "#E8F5E9"
+font = "'Space Grotesk':https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"

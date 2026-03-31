@@ -187,7 +187,7 @@ SQLAlchemy==2.0.41
 sqlparse==0.5.3
 stack-data==0.6.3
 statsmodels==0.14.5
-streamlit==1.47.1
+streamlit==1.55.0
 streamlit-pdf-viewer==0.0.21
 sympy==1.14.0
 tenacity==9.1.2
