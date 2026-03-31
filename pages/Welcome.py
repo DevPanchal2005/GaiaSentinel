@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 from PIL import Image
 import plotly.express as px
+import os
 
 st.set_page_config(page_title="GaiaSentinel", page_icon=":guardsman:", layout="wide")
 
